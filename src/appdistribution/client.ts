@@ -70,6 +70,8 @@ export class AppDistributionClient {
         "X-APP-DISTRO-API-CLIENT-ID": pkg.name,
         "X-APP-DISTRO-API-CLIENT-TYPE": distribution.platform(),
         "X-APP-DISTRO-API-CLIENT-VERSION": pkg.version,
+        "X_GOOG_UPLOAD_FILE_NAME": distribution.getFileName()
+
       },
       files: {
         file: {
